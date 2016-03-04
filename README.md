@@ -1,7 +1,7 @@
 # Paint
 
 This project is pretty useless and only serves as a means to teach myself how to use gtk+ and the
-rust programming language. As of right now it can't do very much. When it finished that will
+rust programming language. As of right now it can't do very much. When it's finished that will
 probably still be the case considering it's inspired MSPaint (even though it looks nothing like it).
 
 ## Building
