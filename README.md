@@ -59,7 +59,7 @@ cargo run --features 3.14
 
 You can replace `3.14` for `3.16` if you want, but you cannot compile below gtk+ version 3.14.
 
-## Congration you done it!
+## Congration, you done it!
 
 Yay! You installed my terrible version of paint. I wish you luck on your useless adventures drawing
 some quality lines that slightly resemble a face if you squint hard enough and turn your head a bit.
