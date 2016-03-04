@@ -20,7 +20,6 @@ Install gtk3 along with rustc and cargo if it is not a part of the rust package.
 ```
 sudo pacman -Syu
 sudo pacman -S gtk3 rust
-
 ```
 If you're the adventurous type of person or you just enjoy being on the bleeding edge, install the
 nightly version of rust from the AUR using whatever method you prefer (I use yaourt).
@@ -60,7 +59,7 @@ cargo run --features 3.14
 
 You can replace `3.14` for `3.16` if you want, but you cannot compile below gtk+ version 3.14.
 
-### Congration you done it!
+## Congration you done it!
 
 Yay! You installed my terrible version of paint. I wish you luck on your useless adventures drawing
 some quality lines that slightly resemble a face if you squint hard enough and turn your head a bit.
