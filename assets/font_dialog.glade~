@@ -30,10 +30,17 @@
         <child>
           <object class="GtkButton" id="font_chooser_select">
             <property name="label" translatable="yes">Select</property>
-            <property name="use_action_appearance">True</property>
             <property name="visible">True</property>
+            <property name="app_paintable">True</property>
             <property name="can_focus">True</property>
+            <property name="has_focus">True</property>
+            <property name="is_focus">True</property>
+            <property name="can_default">True</property>
+            <property name="has_default">True</property>
             <property name="receives_default">True</property>
+            <style>
+              <class name="suggested-action"/>
+            </style>
           </object>
           <packing>
             <property name="pack_type">end</property>
