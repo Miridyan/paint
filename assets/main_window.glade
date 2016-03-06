@@ -2,6 +2,45 @@
 <!-- Generated with glade 3.19.0 -->
 <interface>
   <requires lib="gtk+" version="3.16"/>
+  <object class="GtkWindow" id="color_chooser_popup">
+    <property name="can_focus">False</property>
+    <property name="border_width">6</property>
+    <child>
+      <object class="GtkColorChooserWidget" id="color_chooser_widget">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="rgba">rgb(0,0,0)</property>
+      </object>
+    </child>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="color_chooser_headerbar">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="title">Select Color</property>
+        <property name="has_subtitle">False</property>
+        <child>
+          <object class="GtkButton" id="color_chooser_cancel">
+            <property name="label" translatable="yes">Cancel</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="color_chooser_select">
+            <property name="label" translatable="yes">Select</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="pack_type">end</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
   <object class="GtkWindow" id="font_chooser_popup">
     <property name="width_request">448</property>
     <property name="height_request">550</property>
@@ -33,8 +72,6 @@
             <property name="use_action_appearance">True</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="has_focus">True</property>
-            <property name="is_focus">True</property>
             <property name="receives_default">True</property>
           </object>
           <packing>

@@ -19,7 +19,11 @@ struct ImageViewport {
 	viewport: gtk::Viewport,
 	image: gtk::DrawingArea,
 }
-
+// struct FontDialog {
+// 	window: gtk::Window,
+// 	headerbar: gtk::HeaderBar,
+//
+// }
 fn about_dialog_action() {
 	let about_dialog = gtk::AboutDialog::new();
 	let authors = ["Michael Ditto"];
@@ -50,6 +54,9 @@ fn main() {
 
 	let window: gtk::Window = builder.get_object("main_window").unwrap();
 	let menu_button: gtk::MenuButton = builder.get_object("main_menu_button").unwrap();
+	let font_button: gtk::ToolButton = builder.get_object("font_button").unwrap();
+	let color_button: gtk::ToolButton = builder.get_object("toolbar_color_button").unwrap();
+
 	let menu = gtk::Popover::new(Some(&menu_button));
 	let font = gtk::FontChooserWidget::new();
 
@@ -64,6 +71,37 @@ fn main() {
 	window.connect_delete_event(|_, _| {
 		gtk::main_quit();
 		Inhibit(false)
+	});
+	font_button.connect_clicked(|_| {
+		let lambda_builder = gtk::Builder::new_from_file("assets/font_dialog.glade");
+
+		let font_dialog: gtk::Window = lambda_builder.get_object("font_chooser_popup").unwrap();
+		let select_button: gtk::Button = lambda_builder.get_object("font_chooser_select").unwrap();
+		let cancel_button: gtk::Button = lambda_builder.get_object("font_chooser_cancel").unwrap();
+
+		select_button.connect_clicked(|ref_self| {
+			ref_self.get_toplevel().unwrap().destroy();
+		});
+		cancel_button.connect_clicked(|ref_self| {
+			ref_self.get_toplevel().unwrap().destroy();
+		});
+		font_dialog.show_all();
+	});
+
+	color_button.connect_clicked(|_| {
+		let lambda_builder = gtk::Builder::new_from_file("assets/color_dialog.glade");
+
+		let color_dialog: gtk::Window = lambda_builder.get_object("color_chooser_popup").unwrap();
+		let select_button: gtk::Button = lambda_builder.get_object("color_chooser_select").unwrap();
+		let cancel_button: gtk::Button = lambda_builder.get_object("color_chooser_cancel").unwrap();
+
+		select_button.connect_clicked(|ref_self| {
+			ref_self.get_toplevel().unwrap().destroy();
+		});
+		cancel_button.connect_clicked(|ref_self| {
+			ref_self.get_toplevel().unwrap().destroy();
+		});
+		color_dialog.show_all();
 	});
 
 	window.show_all();
