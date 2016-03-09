@@ -5,6 +5,7 @@
   <object class="GtkWindow" id="color_chooser_popup">
     <property name="can_focus">False</property>
     <property name="border_width">6</property>
+    <property name="type">popup</property>
     <child>
       <object class="GtkColorChooserWidget" id="color_chooser_widget">
         <property name="visible">True</property>
@@ -32,6 +33,9 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <style>
+              <class name="suggested-action"/>
+            </style>
           </object>
           <packing>
             <property name="pack_type">end</property>

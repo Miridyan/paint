@@ -1,9 +1,12 @@
 [root]
-name = "paint"
+name = "paint-app"
 version = "0.0.1"
 dependencies = [
  "gdk 0.3.0 (git+https://github.com/gtk-rs/gdk.git)",
+ "glib 0.0.8 (git+https://github.com/gtk-rs/glib)",
  "gtk 0.0.7 (git+https://github.com/gtk-rs/gtk.git)",
+ "gtk-sys 0.3.0 (git+https://github.com/gtk-rs/sys)",
+ "libc 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "term-painter 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
