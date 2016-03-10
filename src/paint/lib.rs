@@ -1,8 +1,7 @@
-// extern crate ffi;
 extern crate gtk;
 extern crate gdk;
 extern crate glib;
-// extern crate libc;
+extern crate term_painter;
 
 extern crate gtk_sys as ffi;
 

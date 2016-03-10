@@ -1,6 +1,6 @@
 [root]
 name = "paint-app"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
  "gdk 0.3.0 (git+https://github.com/gtk-rs/gdk.git)",
  "glib 0.0.8 (git+https://github.com/gtk-rs/glib)",
